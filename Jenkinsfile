@@ -10,13 +10,13 @@ parameters {
 environment {
         IMAGE_NAME = "devops-demo"
         IMAGE_TAG  = "${BUILD_NUMBER}"
-        EC2_USER   = "ec2-user"
-        EC2_IP     = "<EC2_PUBLIC_IP>"
+        EC2_USER   = "ubuntu"
+        EC2_IP     = "44.204.124.0"
     }
 stages {
 stage('Checkout Code') {
             steps {
-                git branch: 'main', url: '<GITHUB_REPO_URL>'
+                git branch: 'main', url: 'https://github.com/TestaccountPatankar/Jenkins-docker-ci-cd.git'
             }
         }
 stage('Build Docker Image') {
