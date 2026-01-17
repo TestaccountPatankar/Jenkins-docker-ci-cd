@@ -11,7 +11,7 @@ environment {
         IMAGE_NAME = "devops-demo"
         IMAGE_TAG  = "${BUILD_NUMBER}"
         EC2_USER   = "ubuntu"
-        EC2_IP     = "44.204.124.0"
+        EC2_IP     = "44.201.30.207"
     }
 stages {
 stage('Checkout Code') {
