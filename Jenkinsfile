@@ -27,12 +27,12 @@ stage('Build Docker Image') {
                 """
             }
         }
-stage('Manual Approval for PROD') {
+stage('Manual Approval for dev') {
             when {
-                expression { params.ENV == 'prod' }
+                expression { params.ENV == 'dev' }
             }
             steps {
-                input message: 'Approve deployment to PROD?', ok: 'Deploy'
+                input message: 'Approve deployment to dev?', ok: 'Deploy'
             }
         }
 stage('Deploy to EC2') {
